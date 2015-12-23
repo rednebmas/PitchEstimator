@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		22CA74C61C2B2662006A6DF6 /* PitchEstimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22CA74CE1C2B278A006A6DF6 /* PitchEstimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74CD1C2B278A006A6DF6 /* PitchEstimator.m */; };
+		22CA74D11C2B27AD006A6DF6 /* SBMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74CF1C2B27AD006A6DF6 /* SBMath.h */; };
+		22CA74D21C2B27AD006A6DF6 /* SBMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74D01C2B27AD006A6DF6 /* SBMath.m */; };
+		22CA74D71C2B2833006A6DF6 /* SBCircular.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74D31C2B2833006A6DF6 /* SBCircular.h */; };
+		22CA74D81C2B2833006A6DF6 /* SBCircular.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74D41C2B2833006A6DF6 /* SBCircular.m */; };
+		22CA74D91C2B2833006A6DF6 /* SBCircularFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74D51C2B2833006A6DF6 /* SBCircularFloat.h */; };
+		22CA74DA1C2B2833006A6DF6 /* SBCircularFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74D61C2B2833006A6DF6 /* SBCircularFloat.m */; };
+		8DD1FA2CAE842F08F1F529A5 /* libPods-PitchEstimator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 247947D515315D028C505870 /* libPods-PitchEstimator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22CA74C21C2B2662006A6DF6 /* PitchEstimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PitchEstimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PitchEstimator.h; sourceTree = "<group>"; };
 		22CA74C71C2B2662006A6DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22CA74CD1C2B278A006A6DF6 /* PitchEstimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchEstimator.m; sourceTree = "<group>"; };
+		22CA74CF1C2B27AD006A6DF6 /* SBMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMath.h; sourceTree = "<group>"; };
+		22CA74D01C2B27AD006A6DF6 /* SBMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMath.m; sourceTree = "<group>"; };
+		22CA74D31C2B2833006A6DF6 /* SBCircular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCircular.h; sourceTree = "<group>"; };
+		22CA74D41C2B2833006A6DF6 /* SBCircular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCircular.m; sourceTree = "<group>"; };
+		22CA74D51C2B2833006A6DF6 /* SBCircularFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCircularFloat.h; sourceTree = "<group>"; };
+		22CA74D61C2B2833006A6DF6 /* SBCircularFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCircularFloat.m; sourceTree = "<group>"; };
+		247947D515315D028C505870 /* libPods-PitchEstimator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PitchEstimator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DC8523702A6593695C41FE1 /* Pods-PitchEstimator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchEstimator.release.xcconfig"; path = "Pods/Target Support Files/Pods-PitchEstimator/Pods-PitchEstimator.release.xcconfig"; sourceTree = "<group>"; };
+		D07E95AB771DD2AFABD742BA /* Pods-PitchEstimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchEstimator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PitchEstimator/Pods-PitchEstimator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD1FA2CAE842F08F1F529A5 /* libPods-PitchEstimator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08237960558EFFBAD20D7679 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D07E95AB771DD2AFABD742BA /* Pods-PitchEstimator.debug.xcconfig */,
+				9DC8523702A6593695C41FE1 /* Pods-PitchEstimator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		22CA74B81C2B2662006A6DF6 = {
 			isa = PBXGroup;
 			children = (
 				22CA74C41C2B2662006A6DF6 /* PitchEstimator */,
 				22CA74C31C2B2662006A6DF6 /* Products */,
+				08237960558EFFBAD20D7679 /* Pods */,
+				79D4E64632937655DD3CB6AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,9 +77,24 @@
 			isa = PBXGroup;
 			children = (
 				22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */,
+				22CA74CD1C2B278A006A6DF6 /* PitchEstimator.m */,
+				22CA74D31C2B2833006A6DF6 /* SBCircular.h */,
+				22CA74D41C2B2833006A6DF6 /* SBCircular.m */,
+				22CA74D51C2B2833006A6DF6 /* SBCircularFloat.h */,
+				22CA74D61C2B2833006A6DF6 /* SBCircularFloat.m */,
+				22CA74CF1C2B27AD006A6DF6 /* SBMath.h */,
+				22CA74D01C2B27AD006A6DF6 /* SBMath.m */,
 				22CA74C71C2B2662006A6DF6 /* Info.plist */,
 			);
 			path = PitchEstimator;
+			sourceTree = "<group>";
+		};
+		79D4E64632937655DD3CB6AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				247947D515315D028C505870 /* libPods-PitchEstimator.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +105,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CA74C61C2B2662006A6DF6 /* PitchEstimator.h in Headers */,
+				22CA74D11C2B27AD006A6DF6 /* SBMath.h in Headers */,
+				22CA74D71C2B2833006A6DF6 /* SBCircular.h in Headers */,
+				22CA74D91C2B2833006A6DF6 /* SBCircularFloat.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22CA74CA1C2B2662006A6DF6 /* Build configuration list for PBXNativeTarget "PitchEstimator" */;
 			buildPhases = (
+				2562161398DAC68620724E6E /* Check Pods Manifest.lock */,
 				22CA74BD1C2B2662006A6DF6 /* Sources */,
 				22CA74BE1C2B2662006A6DF6 /* Frameworks */,
 				22CA74BF1C2B2662006A6DF6 /* Headers */,
 				22CA74C01C2B2662006A6DF6 /* Resources */,
+				DABF81426328967364FB327C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,11 +175,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2562161398DAC68620724E6E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DABF81426328967364FB327C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PitchEstimator/Pods-PitchEstimator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22CA74BD1C2B2662006A6DF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CA74DA1C2B2833006A6DF6 /* SBCircularFloat.m in Sources */,
+				22CA74D81C2B2833006A6DF6 /* SBCircular.m in Sources */,
+				22CA74D21C2B27AD006A6DF6 /* SBMath.m in Sources */,
+				22CA74CE1C2B278A006A6DF6 /* PitchEstimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +313,7 @@
 		};
 		22CA74CB1C2B2662006A6DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D07E95AB771DD2AFABD742BA /* Pods-PitchEstimator.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -242,6 +330,7 @@
 		};
 		22CA74CC1C2B2662006A6DF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DC8523702A6593695C41FE1 /* Pods-PitchEstimator.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -275,6 +364,7 @@
 				22CA74CC1C2B2662006A6DF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

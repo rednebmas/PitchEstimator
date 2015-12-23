@@ -1,0 +1,26 @@
+PODS:
+  - EZAudio (1.1.2):
+    - EZAudio/Full (= 1.1.2)
+  - EZAudio/Core (1.1.2)
+  - EZAudio/Full (1.1.2):
+    - EZAudio/Core
+    - TPCircularBuffer (~> 1.1)
+  - TPCircularBuffer (1.3)
+
+DEPENDENCIES:
+  - EZAudio (from `https://github.com/rednebmas/EZAudio.git`)
+
+EXTERNAL SOURCES:
+  EZAudio:
+    :git: https://github.com/rednebmas/EZAudio.git
+
+CHECKOUT OPTIONS:
+  EZAudio:
+    :commit: 15d70748655b12c382f18af5739b43ec97f31f36
+    :git: https://github.com/rednebmas/EZAudio.git
+
+SPEC CHECKSUMS:
+  EZAudio: 9d03bc21577de307de51b9a6f40d7129353d218f
+  TPCircularBuffer: d2f604324ce1d293175046db3f67420be1091994
+
+COCOAPODS: 0.39.0
