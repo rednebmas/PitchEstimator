@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223AA44F1C2CB359001B50C6 /* SBNote.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AA44D1C2CB359001B50C6 /* SBNote.h */; };
+		223AA4501C2CB359001B50C6 /* SBNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AA44E1C2CB359001B50C6 /* SBNote.m */; };
 		22CA74C61C2B2662006A6DF6 /* PitchEstimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CA74CE1C2B278A006A6DF6 /* PitchEstimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74CD1C2B278A006A6DF6 /* PitchEstimator.m */; };
 		22CA74D11C2B27AD006A6DF6 /* SBMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74CF1C2B27AD006A6DF6 /* SBMath.h */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		223AA44D1C2CB359001B50C6 /* SBNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNote.h; sourceTree = "<group>"; };
+		223AA44E1C2CB359001B50C6 /* SBNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNote.m; sourceTree = "<group>"; };
 		22CA74C21C2B2662006A6DF6 /* PitchEstimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PitchEstimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PitchEstimator.h; sourceTree = "<group>"; };
 		22CA74C71C2B2662006A6DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				22CA74D61C2B2833006A6DF6 /* SBCircularFloat.m */,
 				22CA74CF1C2B27AD006A6DF6 /* SBMath.h */,
 				22CA74D01C2B27AD006A6DF6 /* SBMath.m */,
+				223AA44D1C2CB359001B50C6 /* SBNote.h */,
+				223AA44E1C2CB359001B50C6 /* SBNote.m */,
 				22CA74C71C2B2662006A6DF6 /* Info.plist */,
 			);
 			path = PitchEstimator;
@@ -104,6 +110,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223AA44F1C2CB359001B50C6 /* SBNote.h in Headers */,
 				22CA74C61C2B2662006A6DF6 /* PitchEstimator.h in Headers */,
 				22CA74D11C2B27AD006A6DF6 /* SBMath.h in Headers */,
 				22CA74D71C2B2833006A6DF6 /* SBCircular.h in Headers */,
@@ -213,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223AA4501C2CB359001B50C6 /* SBNote.m in Sources */,
 				22CA74DA1C2B2833006A6DF6 /* SBCircularFloat.m in Sources */,
 				22CA74D81C2B2833006A6DF6 /* SBCircular.m in Sources */,
 				22CA74D21C2B27AD006A6DF6 /* SBMath.m in Sources */,
