@@ -6,6 +6,9 @@
 //  Copyright © 2015 Sam Bender. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <EZAudio/EZAudio.h>
+
 //! Project version number for PitchEstimator.
 FOUNDATION_EXPORT double PitchEstimatorVersionNumber;
 
@@ -17,8 +20,6 @@ FOUNDATION_EXPORT const unsigned char PitchEstimatorVersionString[];
 //---------------------------------------------------------------------
 // Pitch Estimator Class
 //---------------------------------------------------------------------
-
-#import <Foundation/Foundation.h>
 
 @class Note;
 

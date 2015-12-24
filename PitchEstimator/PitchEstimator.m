@@ -6,7 +6,6 @@
 //  Copyright © 2015 Sam Bender. All rights reserved.
 //
 
-#import <EZAudio/EZAudio.h>
 #import "PitchEstimator.h"
 #import "SBMath.h"
 #import "SBCircularFloat.h"
@@ -33,7 +32,7 @@ NSString * const StructNameField_toString[] = {
 {
     float previousFundamentalFrequencyBin;
     BOOL harmonicOnesInited;
-    int harmonicOnesSize;
+    vDSP_Length harmonicOnesSize;
 }
 
 @property (nonatomic) SBCircularFloat *circularArray;
@@ -143,7 +142,7 @@ NSString * const StructNameField_toString[] = {
 
 - (FindFundamental5Result) findFundamental5:(EZAudioFFT*)fft
     withPreviousFundamentalIndex:(vDSP_Length)previousFundamentalIndex
-                  withBufferSize:(UInt32)bufferSize
+                  withBufferSize:(vDSP_Length)bufferSize
 {
     FindFundamental5Result fromCurrentMaxFreqIndexResult = [self findFundamental5:fft
                                                                           atIndex:[fft maxFrequencyIndex]
@@ -230,7 +229,7 @@ NSString * const StructNameField_toString[] = {
  */
 - (FindFundamental5Result) findFundamental5:(EZAudioFFT*)fft
                                     atIndex:(vDSP_Length)index
-                             withBufferSize:(UInt32)bufferSize
+                             withBufferSize:(vDSP_Length)bufferSize
 {
     vDSP_Length index2x = index * 2;
     NSInteger bestSplit = 1;
@@ -238,7 +237,7 @@ NSString * const StructNameField_toString[] = {
     float indexFreq = [fft frequencyAtIndex:index];
     float bestHSum = [fft frequencyMagnitudeAtIndex:index] + [fft frequencyMagnitudeAtIndex:index2x];
     float bestSplitMag = [fft frequencyMagnitudeAtIndex:index];
-    float avg = [SBMath meanOf:fft.fftData ofSize:bufferSize];
+    float avg = [SBMath meanOf:fft.fftData ofSize:(UInt32)bufferSize];
     
     while (indexFreq * 1/ j > MIN_FREQ)
     {
