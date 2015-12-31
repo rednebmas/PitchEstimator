@@ -11,6 +11,7 @@
 @interface SBNote : NSObject
 
 @property (nonatomic, readonly) double frequency;
+@property (nonatomic, readonly) double centsOff;
 @property (nonatomic, retain, readonly) NSString *nameWithOctave;
 
 - (id) initWithFrequency:(double)frequency;

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <EZAudio/EZAudio.h>
+#import <PitchEstimator/SBNote.h>
 
 //! Project version number for PitchEstimator.
 FOUNDATION_EXPORT double PitchEstimatorVersionNumber;

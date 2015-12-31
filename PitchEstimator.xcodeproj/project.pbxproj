@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		223AA44F1C2CB359001B50C6 /* SBNote.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AA44D1C2CB359001B50C6 /* SBNote.h */; };
+		223AA44F1C2CB359001B50C6 /* SBNote.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AA44D1C2CB359001B50C6 /* SBNote.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		223AA4501C2CB359001B50C6 /* SBNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AA44E1C2CB359001B50C6 /* SBNote.m */; };
 		223AA4581C2CB8C9001B50C6 /* PitchEstimatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AA4571C2CB8C9001B50C6 /* PitchEstimatorTests.m */; };
 		223AA45A1C2CB8C9001B50C6 /* PitchEstimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CA74C21C2B2662006A6DF6 /* PitchEstimator.framework */; };
 		22CA74C61C2B2662006A6DF6 /* PitchEstimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CA74CE1C2B278A006A6DF6 /* PitchEstimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74CD1C2B278A006A6DF6 /* PitchEstimator.m */; };
-		22CA74D11C2B27AD006A6DF6 /* SBMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74CF1C2B27AD006A6DF6 /* SBMath.h */; };
+		22CA74D11C2B27AD006A6DF6 /* SBMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74CF1C2B27AD006A6DF6 /* SBMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CA74D21C2B27AD006A6DF6 /* SBMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74D01C2B27AD006A6DF6 /* SBMath.m */; };
-		22CA74D71C2B2833006A6DF6 /* SBCircular.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74D31C2B2833006A6DF6 /* SBCircular.h */; };
+		22CA74D71C2B2833006A6DF6 /* SBCircular.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74D31C2B2833006A6DF6 /* SBCircular.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CA74D81C2B2833006A6DF6 /* SBCircular.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74D41C2B2833006A6DF6 /* SBCircular.m */; };
-		22CA74D91C2B2833006A6DF6 /* SBCircularFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74D51C2B2833006A6DF6 /* SBCircularFloat.h */; };
+		22CA74D91C2B2833006A6DF6 /* SBCircularFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74D51C2B2833006A6DF6 /* SBCircularFloat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CA74DA1C2B2833006A6DF6 /* SBCircularFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74D61C2B2833006A6DF6 /* SBCircularFloat.m */; };
 		8DD1FA2CAE842F08F1F529A5 /* libPods-PitchEstimator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 247947D515315D028C505870 /* libPods-PitchEstimator.a */; };
 /* End PBXBuildFile section */
@@ -462,6 +462,7 @@
 				223AA45F1C2CB8C9001B50C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22CA74BC1C2B2662006A6DF6 /* Build configuration list for PBXProject "PitchEstimator" */ = {
 			isa = XCConfigurationList;
