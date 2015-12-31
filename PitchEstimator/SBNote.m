@@ -23,6 +23,8 @@
 
 @implementation SBNote
 
+#pragma mark - Initialization
+
 - (id) initWithFrequency:(double)frequency
 {
     self = [self init];
@@ -34,12 +36,13 @@
     return self;
 }
 
-- (void) setNotePropertiesForFrequency:(float)frequency
+- (void) setNotePropertiesForFrequency:(double)frequency
 {
     double centdif = floor(1200 * log(frequency / A4_FREQUENCY) / log(2));
     double notedif = floor(centdif / 100);
     
-    if (fmod(centdif, 100) > 50)
+    double matlabModulus = centdif - 100.0 * floor(centdif / 100.0);
+    if (matlabModulus > 50)
     {
         notedif = notedif + 1;
     }
@@ -47,12 +50,24 @@
     NSArray *noteNames = @[@"C" , @"C#", @"D" , @"D#" , @"E" , @"F" , @"F#", @"G" , @"G#" , @"A" , @"A#" , @"B"];
     
     self.centsOff = centdif - notedif * 100;
-    double notenumber = notedif + 9 + 12*4;
+    double notenumber = notedif + 9 + 12 * 4;
     int octavenumber = (int)floor((notenumber)/12);
     int place = (int)fmod(notenumber, 12) + 1;
     
     
-    self.nameWithOctave = [NSString stringWithFormat:@"%@%d", noteNames[place], octavenumber];
+    self.nameWithOctave = [NSString stringWithFormat:@"%@%d", noteNames[place - 1], octavenumber];
 }
+
+#pragma mark - Misc
+
+- (NSString*) description
+{
+    return [NSString stringWithFormat:@"%@ - %f Hz (%@%f cents)",
+            self.nameWithOctave,
+            self.frequency,
+            self.centsOff < 0 ? @"" : @"+",
+            self.centsOff];
+}
+
 
 @end

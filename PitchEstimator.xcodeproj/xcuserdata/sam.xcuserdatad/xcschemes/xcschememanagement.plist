@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PitchEstimatorTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>223AA4541C2CB8C9001B50C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>22CA74C11C2B2662006A6DF6</key>
 		<dict>
 			<key>primary</key>

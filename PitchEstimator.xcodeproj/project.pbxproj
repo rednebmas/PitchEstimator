@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		223AA44F1C2CB359001B50C6 /* SBNote.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AA44D1C2CB359001B50C6 /* SBNote.h */; };
 		223AA4501C2CB359001B50C6 /* SBNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AA44E1C2CB359001B50C6 /* SBNote.m */; };
+		223AA4581C2CB8C9001B50C6 /* PitchEstimatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AA4571C2CB8C9001B50C6 /* PitchEstimatorTests.m */; };
+		223AA45A1C2CB8C9001B50C6 /* PitchEstimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CA74C21C2B2662006A6DF6 /* PitchEstimator.framework */; };
 		22CA74C61C2B2662006A6DF6 /* PitchEstimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22CA74CE1C2B278A006A6DF6 /* PitchEstimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA74CD1C2B278A006A6DF6 /* PitchEstimator.m */; };
 		22CA74D11C2B27AD006A6DF6 /* SBMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA74CF1C2B27AD006A6DF6 /* SBMath.h */; };
@@ -20,9 +22,22 @@
 		8DD1FA2CAE842F08F1F529A5 /* libPods-PitchEstimator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 247947D515315D028C505870 /* libPods-PitchEstimator.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		223AA45B1C2CB8C9001B50C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22CA74B91C2B2662006A6DF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22CA74C11C2B2662006A6DF6;
+			remoteInfo = PitchEstimator;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		223AA44D1C2CB359001B50C6 /* SBNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNote.h; sourceTree = "<group>"; };
 		223AA44E1C2CB359001B50C6 /* SBNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNote.m; sourceTree = "<group>"; };
+		223AA4551C2CB8C9001B50C6 /* PitchEstimatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchEstimatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		223AA4571C2CB8C9001B50C6 /* PitchEstimatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PitchEstimatorTests.m; sourceTree = "<group>"; };
+		223AA4591C2CB8C9001B50C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CA74C21C2B2662006A6DF6 /* PitchEstimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PitchEstimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA74C51C2B2662006A6DF6 /* PitchEstimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PitchEstimator.h; sourceTree = "<group>"; };
 		22CA74C71C2B2662006A6DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +54,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		223AA4521C2CB8C9001B50C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223AA45A1C2CB8C9001B50C6 /* PitchEstimator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22CA74BE1C2B2662006A6DF6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,10 +82,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		223AA4561C2CB8C9001B50C6 /* PitchEstimatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				223AA4571C2CB8C9001B50C6 /* PitchEstimatorTests.m */,
+				223AA4591C2CB8C9001B50C6 /* Info.plist */,
+			);
+			path = PitchEstimatorTests;
+			sourceTree = "<group>";
+		};
 		22CA74B81C2B2662006A6DF6 = {
 			isa = PBXGroup;
 			children = (
 				22CA74C41C2B2662006A6DF6 /* PitchEstimator */,
+				223AA4561C2CB8C9001B50C6 /* PitchEstimatorTests */,
 				22CA74C31C2B2662006A6DF6 /* Products */,
 				08237960558EFFBAD20D7679 /* Pods */,
 				79D4E64632937655DD3CB6AC /* Frameworks */,
@@ -73,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				22CA74C21C2B2662006A6DF6 /* PitchEstimator.framework */,
+				223AA4551C2CB8C9001B50C6 /* PitchEstimatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +155,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		223AA4541C2CB8C9001B50C6 /* PitchEstimatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 223AA45D1C2CB8C9001B50C6 /* Build configuration list for PBXNativeTarget "PitchEstimatorTests" */;
+			buildPhases = (
+				223AA4511C2CB8C9001B50C6 /* Sources */,
+				223AA4521C2CB8C9001B50C6 /* Frameworks */,
+				223AA4531C2CB8C9001B50C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				223AA45C1C2CB8C9001B50C6 /* PBXTargetDependency */,
+			);
+			name = PitchEstimatorTests;
+			productName = PitchEstimatorTests;
+			productReference = 223AA4551C2CB8C9001B50C6 /* PitchEstimatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		22CA74C11C2B2662006A6DF6 /* PitchEstimator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22CA74CA1C2B2662006A6DF6 /* Build configuration list for PBXNativeTarget "PitchEstimator" */;
@@ -150,6 +202,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Sam Bender";
 				TargetAttributes = {
+					223AA4541C2CB8C9001B50C6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					22CA74C11C2B2662006A6DF6 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -168,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				22CA74C11C2B2662006A6DF6 /* PitchEstimator */,
+				223AA4541C2CB8C9001B50C6 /* PitchEstimatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		223AA4531C2CB8C9001B50C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22CA74C01C2B2662006A6DF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +279,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		223AA4511C2CB8C9001B50C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223AA4581C2CB8C9001B50C6 /* PitchEstimatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22CA74BD1C2B2662006A6DF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,7 +301,35 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		223AA45C1C2CB8C9001B50C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22CA74C11C2B2662006A6DF6 /* PitchEstimator */;
+			targetProxy = 223AA45B1C2CB8C9001B50C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		223AA45E1C2CB8C9001B50C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PitchEstimatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sambender.PitchEstimatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		223AA45F1C2CB8C9001B50C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PitchEstimatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sambender.PitchEstimatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		22CA74C81C2B2662006A6DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -356,6 +455,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		223AA45D1C2CB8C9001B50C6 /* Build configuration list for PBXNativeTarget "PitchEstimatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223AA45E1C2CB8C9001B50C6 /* Debug */,
+				223AA45F1C2CB8C9001B50C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		22CA74BC1C2B2662006A6DF6 /* Build configuration list for PBXProject "PitchEstimator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
