@@ -10,6 +10,8 @@
 #import <EZAudio/EZAudio.h>
 #import <PitchEstimator/SBNote.h>
 
+#define RECOMMENDED_FFT_WINDOW_SIZE 4096 * 2
+
 //! Project version number for PitchEstimator.
 FOUNDATION_EXPORT double PitchEstimatorVersionNumber;
 

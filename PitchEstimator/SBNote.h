@@ -13,7 +13,9 @@
 @property (nonatomic, readonly) double frequency;
 @property (nonatomic, readonly) double centsOff;
 @property (nonatomic, retain, readonly) NSString *nameWithOctave;
+@property (nonatomic, retain, readonly) NSString *nameWithoutOctave;
 
 - (id) initWithFrequency:(double)frequency;
+- (id) initWithName:(NSString*)name; // must include octave!
 
 @end

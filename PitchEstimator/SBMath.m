@@ -53,4 +53,9 @@
     return mean;
 }
 
++ (float) matlabModulus:(float)a of:(float)m
+{
+    return a - m * floorf(a / m);
+}
+
 @end
