@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "SBNote.h"
+#import "SBMath.h"
 
 @interface PitchEstimatorTests : XCTestCase
 
@@ -28,7 +29,7 @@
 /**
  * Tests that frequency to note name is correct
  */
-- (void)testSBNote {
+- (void)testSBNoteFrequencyToNote {
     SBNote *a4 = [[SBNote alloc] initWithFrequency:440.00];
     XCTAssert([a4.nameWithOctave isEqualToString:@"A4"], @"A4");
     
@@ -54,11 +55,19 @@
     XCTAssert([b4.nameWithOctave isEqualToString:@"B4"], @"B4");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testSBNoteNoteToFrequency
+{
+    SBNote *a4 = [[SBNote alloc] initWithName:@"A4"];
+    XCTAssert(a4.frequency == 440.00, @"A4 %f", a4.frequency);
+    
+    SBNote *c3 = [[SBNote alloc] initWithName:@"C3"];
+    XCTAssert([SBMath value:c3.frequency withinTolerance:.01 ofProjected:130.8126], @"C3");
+    
+    SBNote *cs2 = [[SBNote alloc] initWithName:@"C#2"];
+    XCTAssert([SBMath value:cs2.frequency withinTolerance:.01 ofProjected:69.29], @"C#2");
+    
+    SBNote *gb7 = [[SBNote alloc] initWithName:@"Gb7"];
+    XCTAssert([SBMath value:gb7.frequency withinTolerance:.01 ofProjected:2959.95], @"C#2");
 }
 
 @end

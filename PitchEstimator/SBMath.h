@@ -15,6 +15,7 @@ typedef struct FloatRange {
 
 @interface SBMath : NSObject
 
++ (BOOL) value:(double)value withinTolerance:(double)tolerance ofProjected:(double)projected;
 /*
  * This will return different results than Objective-C's built in modulus for negative numbers
  *

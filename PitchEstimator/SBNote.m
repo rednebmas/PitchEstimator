@@ -48,7 +48,7 @@
     self = [self init];
     if (self)
     {
-        
+        [self calculateFrequencyForNoteName:name];
     }
     return self;
 }
@@ -91,6 +91,7 @@
 
 /**
  * Only takes octaves from 0 - 9
+ * Does not support double flats or sharps
  */
 - (void) calculateFrequencyForNoteName:(NSString*)name
 {
@@ -103,15 +104,23 @@
     {
         unichar charAtIndex = [name characterAtIndex:i];
         // unichar is a typealias for short int
-        // in unicode, A is 0x41 and Z is 0x5A
-        if (charAtIndex >= 0x41 && charAtIndex < 0x5A)
+        // in unicode, A is 0x41 and G is 0x47
+        // # is 0x23, b is 0x62
+        // 0 is 0x30, 9 is 0x39
+        if ((charAtIndex >= 0x41 && charAtIndex <= 0x47)
+            || charAtIndex == 0x23
+            || charAtIndex == 0x62)
         {
             [letterName appendFormat:@"%C", charAtIndex];
         }
-        else
+        else if (charAtIndex >= 0x30 && charAtIndex <= 0x39)
         {
             octave = [[NSString stringWithFormat:@"%C", charAtIndex] intValue];
             break;
+        }
+        else
+        {
+            [NSException raise:@"Invalid character while parsing note name: %@" format:name];
         }
     }
     
@@ -147,8 +156,36 @@
     return _noteNames;
 }
 
+
++ (NSDictionary*) sharpToFlat
+{
+    static NSDictionary *_sharpToFlat;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharpToFlat = @{
+                         @"Bb" : @"A#",
+                         @"Eb" : @"D#",
+                         @"Ab" : @"G#",
+                         @"Db" : @"C#",
+                         @"Gb" : @"F#",
+                         @"Cb" : @"B",
+                         @"Fb" : @"E"
+                         };
+    });
+    return _sharpToFlat;
+}
+
 + (int) halfStepsFromA4FromNameWithoutOctave:(NSString*)nameWithoutOctave andOctave:(int)octave
 {
+    // Note names need to not have enharmonics because we are using the index, so we must
+    // check if the name without octave is a flat and convert it, otherwise index for object
+    // will be not found.
+    NSString *sharpToFlatConversion = [[self sharpToFlat] objectForKey:nameWithoutOctave];
+    if (sharpToFlatConversion != nil)
+    {
+        nameWithoutOctave = sharpToFlatConversion;
+    }
+    
     int indexOfNoteName = (int)[[SBNote noteNames] indexOfObject:nameWithoutOctave];
     int halfStepsFromA4 = [HALF_STEPS_AWAY_FROM_A4_TO_NOTE_IN_4TH_OCTAVE[indexOfNoteName] intValue] + 12 * (octave - 4);
     

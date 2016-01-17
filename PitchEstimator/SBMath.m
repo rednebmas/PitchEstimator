@@ -58,4 +58,9 @@
     return a - m * floorf(a / m);
 }
 
++ (BOOL) value:(double)value withinTolerance:(double)tolerance ofProjected:(double)projected
+{
+    return value < projected + tolerance && value > projected - tolerance;
+}
+
 @end
